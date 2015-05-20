@@ -1,1 +1,7 @@
 .dropbox
+**/*.aux
+**/*.log
+**/*.out
+**/*.pdf
+**/*.gz
+
