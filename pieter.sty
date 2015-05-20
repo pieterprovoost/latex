@@ -1,0 +1,112 @@
+\usepackage[utf8]{inputenc}
+\usepackage{titling}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\ttdefault}{pcr}
+\usepackage{parskip}
+
+% page
+
+\usepackage{geometry}
+\usepackage{layout}
+\geometry{ 
+	left=2.5cm,
+	right=2.5cm,
+	top=3.5cm,
+	bottom=3cm
+}
+
+% paragraph
+
+\usepackage{titlesec}
+%\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% footnotes
+
+\usepackage[bottom, hang, flushmargin]{footmisc}
+
+% captions
+
+\usepackage[justification=justified,singlelinecheck=false]{caption}
+
+% color
+
+\usepackage{color}
+
+% hyperlinks
+
+\usepackage[hyphens]{url}
+\usepackage{breakurl}
+%\urlstyle{same}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfstartview={XYZ null null 1.00}}
+
+% listings
+
+\usepackage{listings}
+\definecolor{code}{rgb}{0,0,0}
+\definecolor{codeback}{rgb}{0.95,0.95,0.95}
+\definecolor{codecomment}{rgb}{0.5,0.5,0.5}
+\lstset{ %
+  backgroundcolor=\color{codeback},
+  basicstyle=\small\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=t,
+  commentstyle=\color{codecomment},
+  escapeinside={\%*}{*)},
+  frame=none,
+  framesep=0pt,
+  framexleftmargin=12pt,
+  framextopmargin=8pt,
+  framexbottommargin=8pt, 
+  frame=tb,
+  framerule=0pt,
+  keepspaces=true,
+  keywordstyle=\color{code},
+  otherkeywords={*,...},
+  numbers=none,
+  numbersep=5pt,
+  numberstyle=\tiny\color{code},
+  rulecolor=\color{code},here))
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{code},
+  tabsize=4,
+  title=\lstname,
+  xleftmargin=12pt,
+  xrightmargin=12pt
+}
+
+% title
+
+\makeatletter
+\renewcommand{\@maketitle}{
+\newpage
+\null
+\vskip 2em%
+{\LARGE \@title \par}
+\vskip 2em%
+\par} \makeatother
+
+% tables
+
+\usepackage{tabularx}
+\usepackage{placeins}
+
+% hyphenation
+
+\hyphenation{text/javascript}
+
+% itemize
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\bullet$}
+
+\usepackage{enumitem}
+\setlist[itemize]{topsep=0pt,after=\vspace{.5\baselineskip}}
